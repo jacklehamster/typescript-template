@@ -1,0 +1,48 @@
+{
+  "name": "@dobuki/typescript-template",
+  "version": "1.0.0",
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jacklehamster/typescript-template.git"
+  },
+  "author": {
+    "name": "Vincent Le Quang",
+    "email": "jacklehamster@gmail.com"
+  },
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "import": "./dist/index.js",
+    "require": "./dist/index.cjs",
+    "types": "./dist/index.d.ts"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "scripts": {
+    "test": "bun test",
+    "build": "bun i && rm -rf *.tsbuildinfo && rm -rf dist/*.* && bun build --target=browser ./src/index.ts --outfile=dist/index.js && bun run build:declaration && bun link",
+    "build-dev": "bun i && rm -rf *.tsbuildinfo && rm -rf dist/*.* && tsc && bun run build:declaration && bun link",
+    "build:declaration": "tsc --emitDeclarationOnly --project tsconfig.types.json",
+    "build:example": "cd example && bun i && bun run build && cd ..",
+    "example": "cd example && bun start && cd ..",
+    "fix-package-name": "npm explore package-name-fixer -- bun start \"$(pwd)\"",
+    "auto-publish": "npm explore @dobuki/auto-publish -- bun run auto-publish \"$(pwd)\""
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@dobuki/dev-dependencies": "latest"
+  },
+  "dependencies": {},
+  "description": "Template for typescript libraries that can be easily imported to Cloudflare Workers",
+  "homepage": "https://jacklehamster.github.io/typescript-template/"
+}
