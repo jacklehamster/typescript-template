@@ -170,8 +170,3 @@ out
 # IntelliJ based IDEs
 .idea
 
-# Generated
-app.ico
-favicon*.*
-bun.lock
-app.icns
