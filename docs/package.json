@@ -26,7 +26,9 @@
     "serve-static-bun": "^0.5.3"
   },
   "peerDependencies": {
-    "typescript": "^5.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
     "@dobuki/typescript-template": "link:@dobuki/typescript-template"
   }
 }

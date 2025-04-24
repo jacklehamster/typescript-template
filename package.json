@@ -28,8 +28,8 @@
     "build": "bun i && rm -rf *.tsbuildinfo && rm -rf dist/*.* && bun build --target=browser ./src/index.ts --outfile=dist/index.js && bun run build:declaration && bun link",
     "build-dev": "bun i && rm -rf *.tsbuildinfo && rm -rf dist/*.* && tsc && bun run build:declaration && bun link",
     "build:declaration": "tsc --emitDeclarationOnly --project tsconfig.types.json",
-    "build:example": "cd example && bun i && bun run build && cd ..",
-    "example": "cd example && bun start && cd ..",
+    "build:docs": "cd docs && bun i && bun run build && cd ..",
+    "docs": "cd docs && bun start && cd ..",
     "fix-package-name": "npm explore package-name-fixer -- bun start \"$(pwd)\"",
     "auto-publish": "npm explore @dobuki/auto-publish -- bun run auto-publish \"$(pwd)\""
   },
