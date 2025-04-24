@@ -24,7 +24,7 @@ jobs:
 
       # Build the project with Bun
       - name: Build
-        run: bun run build:docs
+        run: bun run build && bun run build:docs
 
       # Deploy to GitHub Pages
       - name: Deploy
