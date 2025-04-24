@@ -169,5 +169,3 @@ out
 
 # IntelliJ based IDEs
 .idea
-
-!dist
