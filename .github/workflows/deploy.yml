@@ -24,11 +24,11 @@ jobs:
 
       # Build the project with Bun
       - name: Build
-        run: bun run build
+        run: bun run build:docs
 
       # Deploy to GitHub Pages
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: ./docs
