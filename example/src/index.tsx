@@ -19,6 +19,6 @@ root.render(location.search.indexOf("strict-mode") >= 0 ?
 
 //  Hello
 ;
+const hello = () => "Hello World";
 
-
-export {};
+export { hello };
